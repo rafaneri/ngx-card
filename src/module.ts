@@ -1,7 +1,7 @@
-import {NgModule} from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 
-import {NgxCardNumberTemplate, NgxCardNameTemplate, NgxCardExpiryTemplate, NgxCardCvcTemplate} from './inputs';
-import {NgxCard} from './card';
+import { NgxCardNumberTemplate, NgxCardNameTemplate, NgxCardExpiryTemplate, NgxCardCvcTemplate } from './inputs';
+import { NgxCard } from './card';
 
 const CARD_DIRECTIVES = [
 	NgxCard,
@@ -12,7 +12,8 @@ const CARD_DIRECTIVES = [
 ];
 
 @NgModule({
-  declarations: [CARD_DIRECTIVES],
-  exports: [CARD_DIRECTIVES],
+	declarations: [CARD_DIRECTIVES],
+	exports: [CARD_DIRECTIVES],
+	schemas: [NO_ERRORS_SCHEMA]
 })
-export class CardModule {}
+export class CardModule { }
